@@ -1,40 +1,42 @@
 import React, { Component } from 'react'
-import './MainShelf.css'
+import './Main_Bin.css'
+import { Link } from 'react-router-dom';
 
-export class MainShelf extends Component {
+ class MainHome extends Component {
   render() {
     return (
       <div>
+        <Link to='/bins/a'>
         <div className="shelf">
           <div className="shelf-text">
-            <h1> bin 1 </h1>
+            <h1>Shelf A </h1>
           </div>
         </div>
+        </Link>
+        <Link to='/bins/b'>
         <div className="shelf">
         <div className="shelf-text">
-            <h1>  bin 2 </h1>
+            <h1>Shelf B </h1>
           </div>
         </div >
+        </Link>
+        <Link to='/bins/c'>
         <div className="shelf">
         <div className="shelf-text">
-            <h1> bin 3 </h1>
+            <h1>Shelf C </h1>
           </div>
         </div>
+        </Link>
+        <Link to='/bins/d'>
         <div className="shelf">
         <div className="shelf-text">
-            <h1> bin  4</h1>
+            <h1>Shelf D </h1>
           </div>
         </div>
-        <div className="shelf">
-        <div className="shelf-text">
-            <h1> bin  5</h1>
-          </div>
-        </div>
-
-        </div>
-
+        </Link>
+      </div>
     )
   }
 }
 
-export default MainShelf
+export default MainHome
