@@ -1,0 +1,13 @@
+.header {
+    height: 10vh;
+    width: 100%;
+    background: #AB2A19;
+    color: white;
+    font-family: sans-serif;
+    padding-left: 310px;
+}
+
+.logo {
+    height: 20px;
+    width: 20px;
+}
