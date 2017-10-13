@@ -1,0 +1,15 @@
+.shelf {
+    
+    width: 40%;
+    height: 6vh;
+    background: #AB2A19;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.shelf-text {
+    color: white;
+    display: flex;
+    padding-left: 65px;
+}
