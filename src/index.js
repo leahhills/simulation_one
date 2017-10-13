@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { Hashrouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 //stll need to install Hashrouter
 ReactDOM.render(
-<HashRouter><App /></HashRouter>  
+<HashRouter>
+    <App />
+    </HashRouter>  
 , document.getElementById('root'));
 
