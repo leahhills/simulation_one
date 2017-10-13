@@ -1,29 +1,23 @@
 import React, { Component } from 'react'
-import './Main_Bin.css'
-
+import './Main_Create.css'
 export class MainBin extends Component {
+
+
   render() {
+
+    
     return (
-      <div>
-        <div className="shelf">
-          <div className="shelf-text">
-            <h1>Shelf A </h1>
-          </div>
+      <div className="containers">
+        <div>
+        <p> Name </p>
+          <input placeholder="name here" />
+        
+        <p> Price </p>
+        <input placeholder="price here" />
         </div>
-        <div className="shelf">
-        <div className="shelf-text">
-            <h1>Shelf B </h1>
-          </div>
-        </div >
-        <div className="shelf">
-        <div className="shelf-text">
-            <h1>Shelf C </h1>
-          </div>
-        </div>
-        <div className="shelf">
-        <div className="shelf-text">
-            <h1>Shelf D </h1>
-          </div>
+        <div className="button">
+          <button> Edit </button>
+          <button> Delete </button>
         </div>
       </div>
     )
