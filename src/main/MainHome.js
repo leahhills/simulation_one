@@ -4,6 +4,8 @@ import './Main_Bin.css'
 import { Link } from 'react-router-dom';
 
  class MainHome extends Component {
+
+
   render() {
     return (
       <div>
@@ -24,7 +26,7 @@ import { Link } from 'react-router-dom';
         <div className="shelf-text">
             <h1>Shelf B </h1>
           </div>
-        </div >y
+        </div >
         </Link>
         <Link to='/bins/c'>
         <div className="shelf">
