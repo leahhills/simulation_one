@@ -4,7 +4,13 @@ import './Main_Bin.css'
 import { Link } from 'react-router-dom';
 
  class MainHome extends Component {
+  constructor(props){
+    super(props);
 
+    this.state={
+      
+    }
+  }
 
   render() {
     return (
@@ -12,7 +18,7 @@ import { Link } from 'react-router-dom';
       
         
     
-        <Link to='/bins/a'>
+        <Link to='/bins/' params={{bins:'a'}}>
         
      
         <div className="shelf">
