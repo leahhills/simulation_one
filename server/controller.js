@@ -9,8 +9,8 @@ module.exports = {
     },
     createBin: (req,res,next)=>{
         const dbInstance = req.app.get('db')
-        const {itemname,itemprice} = req.body;
-        dbInstance.create_bin([itemname,itemprice,req.params.id])
+        const {BinName, ShelfId} = req.body;
+        dbInstance.create_bin([BinName, ShelfId])
         .then( ()=>res.status(200).send())
         .catch(() => res.status(500).send());
 
@@ -19,25 +19,45 @@ module.exports = {
     deleteBin: (req,res,next) => {
         const dbInstance = req.app.get('db')
     
-        dbInstance.delete_bin([req.params.id])
+        dbInstance.delete_bin(req.params.id)
         .then( () =>res.status(200).send())
         .catch(() => res.status(500).send());
     },
 
     getShelf: (req,res,next) =>{
         const dbInstance = req.app.get('db')
-
         dbInstance.read_shelf([req.params.id])
         .then(items =>res.status(200).send(items))
         .catch(()=>res.status(500).send());
 
     },
 
+    createShelf: (req,res,next) =>{
+        const dbInstance = req.app.get('db')
+        const  body  = req.body;
+        dbInstance.create_shelf(body.ShelfName)
+        .then(
+            () =>{
+                res.status(200).send()
+            }
+        )
+        
+        .catch(()=>res.status(500).send());
+
+    },
+    deleteShelf: (req,res,next) => {
+        const dbInstance = req.app.get('db')
+        console.log(req.params.id)
+        dbInstance.delete_shelf(req.params.id)
+        .then( () =>res.status(200).send())
+        .catch( () => res.status(500).send());
+    },
+
     updateBin: (req,res,next)=>{
         const dbInstance =req.app.get('db')
-        const {itemname,itemprice}= req.body;
+        const {BinName, ShelfId, BinItem, BinItemPrice }= req.body;
         
-        dbInstance.update_bin([req.params.id,itemname,itemprice])
+        dbInstance.update_bin([req.params.id, BinName, ShelfId, BinItem, BinItemPrice])
         .then( () =>res.status(200).send())
 
     }
