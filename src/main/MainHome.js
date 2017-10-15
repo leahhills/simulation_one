@@ -1,12 +1,18 @@
 import React, { Component } from 'react'
 import './Main_Bin.css'
+
 import { Link } from 'react-router-dom';
 
  class MainHome extends Component {
   render() {
     return (
       <div>
+      
+        
+    
         <Link to='/bins/a'>
+        
+     
         <div className="shelf">
           <div className="shelf-text">
             <h1>Shelf A </h1>
@@ -18,7 +24,7 @@ import { Link } from 'react-router-dom';
         <div className="shelf-text">
             <h1>Shelf B </h1>
           </div>
-        </div >
+        </div >y
         </Link>
         <Link to='/bins/c'>
         <div className="shelf">
@@ -34,6 +40,10 @@ import { Link } from 'react-router-dom';
           </div>
         </div>
         </Link>
+        
+       
+
+
       </div>
     )
   }
