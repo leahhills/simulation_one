@@ -1,2 +1,2 @@
-insert into Shelf (ShelfName)
-    values ($1);
+INSERT INTO Shelf (ShelfName)
+VALUES ($1);

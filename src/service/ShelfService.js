@@ -6,7 +6,7 @@ class ShelfService {
         //method that gets the different shelves
         
     }
-    getItems(){
-        return axios.get(`${baseURL}/api/shelf/:id`)
+    getBinItems(id){
+        return axios.get(`${baseURL}/api/bin/${id}`);
     }
 }

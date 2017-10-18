@@ -1,2 +1,2 @@
-DELETE FROM bin WHERE 
+DELETE FROM Bin WHERE 
 BinId = $1;

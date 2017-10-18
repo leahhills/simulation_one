@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
       
         
     
-        <Link to='/bins/' params={{bins:'a'}}>
+        <Link to='/bins/a' >
         
      
         <div className="shelf">
