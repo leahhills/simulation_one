@@ -11,12 +11,16 @@ app.use(bodyParser.json());
 app.use(cors());
 massive(process.env.CONNECTION_STRING).then(dbInstance => app.set('db', dbInstance));
 
+// Shelf
+app.post('/api/shelf', controller.createShelf);
+app.get('/api/shelf/:id', controller.getShelf);
+app.get('/api/shelf', controller.getShelves);
+app.delete('/api/shelf/:id', controller.deleteShelf);
+
+// Bin
 app.get('/api/bin/:id', controller.getBin);
 app.post('/api/bin', controller.createBin);
 app.delete('/api/bin/:id', controller.deleteBin);
-app.get('/api/shelf/:id', controller.getShelf);
-app.post('/api/shelf', controller.createShelf);
-app.delete('/api/shelf/:id', controller.deleteShelf);
 app.put('/api/bin/:id', controller.updateBin);
 
 

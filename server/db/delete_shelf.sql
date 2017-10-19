@@ -1,2 +1,2 @@
-DELETE FROM Shelf WHERE shelfid = ($1);
-DELETE FROM Bin WHERE shelfId = $1
+DELETE FROM Shelf WHERE ShelfId = $1;
+DELETE FROM Bin WHERE ShelfId = $1;
