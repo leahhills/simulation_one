@@ -18,7 +18,7 @@ app.get('/api/shelf', controller.getShelves);
 app.delete('/api/shelf/:id', controller.deleteShelf);
 
 // Bin
-app.get('/api/bin/:id', controller.getBin);
+app.get('/api/bins/:id', controller.getBins);
 app.get('/api/bin/bin/:id', controller.getBinItem);
 app.post('/api/bin', controller.createBin);
 app.delete('/api/bin/:id', controller.deleteBin);
