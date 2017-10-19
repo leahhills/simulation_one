@@ -11,7 +11,7 @@ CREATE TABLE Bin (
     BinId Serial,
     BinName Text NOT NULL,
     ShelfId Integer NOT NULL,
-    BinItem  Text NULL,
+    BinItemName  Text NULL,
     BinItemPrice Integer NULL
 );
 

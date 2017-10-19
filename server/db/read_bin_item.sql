@@ -1,0 +1,2 @@
+SELECT * FROM Bin
+WHERE BinId = $1;

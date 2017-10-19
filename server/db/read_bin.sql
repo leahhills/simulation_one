@@ -1,2 +1,2 @@
 SELECT * FROM Bin
-WHERE ShelfId = ($1);
+WHERE ShelfId = $1;
