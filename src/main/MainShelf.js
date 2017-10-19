@@ -24,18 +24,19 @@ export class MainShelf extends Component {
 
   render() {
     let binList = this.state.Bins.map(Bin => {
+      let binName = Bin.binitemname ? Bin.binname : 'Empty';
       return (
-        <div>I am a bin</div>
+        <div key={Bin.binid} className="shelf">
+          <div className="shelf-text">
+            <h1> { binName } </h1>
+          </div>
+        </div>
       );
     });
     return (
       <div>
         {binList}
-        <div className="shelf">
-          <div className="shelf-text">
-            <h1> bin 1 </h1>
-          </div>
-        </div>
+        
 
       </div>
     )
