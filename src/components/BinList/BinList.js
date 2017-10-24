@@ -47,7 +47,7 @@ export class BinList extends Component {
     });
     return (
       <div>
-        <h1>{this.state.ShelfId}</h1>
+        
         {binList}
         
 

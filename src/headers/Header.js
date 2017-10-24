@@ -29,7 +29,7 @@ export default function Header(props) {
               <h1 className="title">SHELFIE</h1>
               { path.length > 2 ? 
 
-              <Link to={`/bins/${shelf}`}>
+              <Link to={`/bins/${shelf}`} style={{textDecoration:'none', color:"white"}}>
               <div className="shelfname">
                 <h1>{'Shelf '+ shelf}</h1>
               </div> 

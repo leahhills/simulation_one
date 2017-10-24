@@ -90,7 +90,7 @@ export class Bin extends Component {
 		if (this.state.IsEditing) {
 			binData = (
 				<div>
-					<h1> {this.state.Bin.binname} </h1>
+					
 					<p>
 						<input value={this.state.Bin.binitemname} onChange={this.onChangeBinItemName} placeholder="Enter Bin Name"/>
 					</p>
@@ -106,7 +106,7 @@ export class Bin extends Component {
 		} else {
 			binData = (
 				<div>
-					<h1> {this.state.Bin.binname} </h1>
+					
 					<p> Name: {this.state.Bin.binitemname || 'N/A'} </p>
 					<p> Price: {this.state.Bin.binitemprice || 'N/A'}</p>
 					<div className="button">
