@@ -1,0 +1,40 @@
+.header {
+    height: 10vh;
+    width: 100%;
+    background: #AB2A19;
+    color: white;
+    font-family: sans-serif;
+    padding-left: 40px;
+    display: flex;
+}
+
+.pic {
+    line-height: 4vh;
+    height: 4vh;
+    width: 4vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 1vh;
+    margin-right: 2vh;
+}
+
+.title {
+    line-height: 10vh;
+    margin: 0;
+    padding: 0;
+    font-size: 4vh;
+}
+.shelfname{
+    
+    width:200px;
+    height:100%;
+    text-align: center;
+    background-color: #D34735;
+}
+.binname{
+    width:200px;
+    height:100%;
+    text-align: center;
+    background-color:#ED6B5A;
+}
+

@@ -4,6 +4,7 @@ const cors = require('cors');
 const massive = require('massive');
 require('dotenv').config();
 const controller = require('./controller');
+const endpoints = require('./endpoints');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -11,19 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 massive(process.env.CONNECTION_STRING).then(dbInstance => app.set('db', dbInstance));
 
-// Shelf
-app.post('/api/shelf', controller.createShelf);
-app.get('/api/shelf/:id', controller.getShelf);
-app.get('/api/shelf', controller.getShelves);
-app.delete('/api/shelf/:id', controller.deleteShelf);
-
-// Bin
-app.get('/api/bins/:id', controller.getBins);
-app.get('/api/bin/bin/:id', controller.getBinItem);
-app.post('/api/bin', controller.createBin);
-app.delete('/api/bin/:id', controller.deleteBin);
-app.put('/api/bin/:id', controller.updateBin);
-
+endpoints.buildEndPoints(app, controller);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => { console.log(`Server is listening on port ${port}.`) });

@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import './Main_Bin.css'
-import ShelfService from '../service/ShelfService.js';
-
+import './ShelfList.css'
+import ShelfService from '../../service/ShelfService.js';
 import { Link } from 'react-router-dom';
 
- class MainHome extends Component {
+ class ShelfList extends Component {
   constructor(props){
     super(props);
 
@@ -24,10 +23,12 @@ import { Link } from 'react-router-dom';
   }
 
   render() {
-    let shelfList = this.state.shelves.map(shelf => {
+    let shelfList = this.state.shelves
+    .sort((a, b) => a.shelfname > b.shelfname)
+    .map(shelf => {
       return (
         <div key={shelf.shelfid}>
-          <Link to={'/bins/'+ shelf.shelfid} >
+          <Link className="no-dec" to={'/bins/'+ shelf.shelfid} >
             <div className="shelf">
               <div className="shelf-text">
                 <h1>{shelf.shelfname}</h1>
@@ -47,4 +48,4 @@ import { Link } from 'react-router-dom';
   }
 }
 
-export default MainHome
+export default ShelfList

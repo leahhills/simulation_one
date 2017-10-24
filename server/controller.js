@@ -1,19 +1,16 @@
 module.exports = {
+    getBin: (req, res, next) => {
+        const dbInstance = req.app.get('db');
+        dbInstance.read_bin(req.params.id)
+        .then(bin => res.status(200).send(bin))
+        .catch(err => res.status(500).send(err));
+    },
     getBins: (req, res, next) => {
         const dbInstance = req.app.get('db');
         dbInstance.read_bins(req.params.id)
         .then(bins => res.status(200).send(bins))
         .catch(err => res.status(500).send(err));
     },
-    getBinItem: (req, res, next) => {
-        const dbInstance = req.app.get('db');
-
-        dbInstance.read_bin_item(req.params.id)
-        .then(item => res.status(200).send(item))
-        .catch(err => res.status(500).send(err));
-
-    },
-
     createBin: (req,res,next)=>{
         const dbInstance = req.app.get('db')
         const {BinName, ShelfId} = req.body;
@@ -23,10 +20,11 @@ module.exports = {
 
     },
     updateBin: (req, res, next)=>{
+        console.log('getting here?')
         const dbInstance = req.app.get('db');
-        const {BinName, ShelfId, BinItemName, BinItemPrice} = req.body;
-        console.log(BinName, ShelfId, BinItemName, BinItemPrice, req.params.id);
-        dbInstance.update_bin([req.params.id, BinName, ShelfId, BinItemName, BinItemPrice])
+        console.log(req.body);
+        const {binname, shelfid, binitemname, binitemprice} = req.body;
+        dbInstance.update_bin([req.params.id, binname, shelfid, binitemname, binitemprice])
         .then(() => res.status(200).send('Bin updated successfully.'))
         .catch(err => res.status(500).send(err));
 

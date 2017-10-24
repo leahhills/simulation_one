@@ -1,0 +1,16 @@
+.shelf {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 6vh;
+    background: #D34735;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius:10px;
+}
+
+.shelf-text {
+    color: white;
+    line-height: 6vh;
+    text-align: center;
+}
