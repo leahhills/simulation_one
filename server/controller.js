@@ -11,6 +11,15 @@ module.exports = {
         .then(bins => res.status(200).send(bins))
         .catch(err => res.status(500).send(err));
     },
+
+    getAllBins: (req, res, next) => {
+        const dbInstance = req.app.get('db');
+        dbInstance.read_allbins()
+        .then(allbins =>res.status(200).send(allbins))
+        .catch(err=> res.statust(500).send(err));
+    },
+
+
     createBin: (req,res,next)=>{
         const dbInstance = req.app.get('db')
         const {BinName, ShelfId} = req.body;
