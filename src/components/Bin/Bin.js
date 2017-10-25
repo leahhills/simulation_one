@@ -70,7 +70,7 @@ export class Bin extends Component {
 		.catch(err => console.log(err));
 	}
 
-	saveButtonHandler() {
+	saveButtonHandler(Bin) {
 		this.shelfService.updateBin(this.state.BinId, this.state.Bin)
 		.then((response) => {
 			console.log(response);

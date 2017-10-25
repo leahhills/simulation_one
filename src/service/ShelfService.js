@@ -32,7 +32,7 @@ export default class ShelfService {
     createBin(Bin) {
         return axios.post(`${this.baseURL}/api/bin`, Bin);
     }
-    updateBin(BinId, Bin) {
+    updateBin(BinId,Bin){
         return axios.put(`${this.baseURL}/api/bin/${BinId}`, Bin);
     }
     deleteBin(BinId) {
