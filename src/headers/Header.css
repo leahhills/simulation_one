@@ -21,7 +21,7 @@
 .title {
     line-height: 10vh;
     margin: 0;
-    padding: 0;
+    padding:0px 40px 0px 0px;
     font-size: 4vh;
 }
 .shelfname{
