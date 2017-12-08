@@ -29,6 +29,9 @@ export default class ShelfService {
     getBin(BinId) {
         return axios.get(`${this.baseURL}/api/bin/${BinId}`);
     }
+    getAllBins(){
+        return axios.get(`${this.baseURL}/api/bins`);
+    }
     createBin(Bin) {
         return axios.post(`${this.baseURL}/api/bin`, Bin);
     }

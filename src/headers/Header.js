@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 export default function Header(props) {
   let path = (window.location.pathname).split('/');
   let shelf = path.length ? path.includes('bins') ? path[path.length-1] : Math.ceil((path[path.length-1]*1)/5) : ''
-  console.log(path);
+  //console.log(path);
 
   let bin =  path[1] === 'bin' ? path[path.length-1] : ''
 
